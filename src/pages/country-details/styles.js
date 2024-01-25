@@ -16,15 +16,31 @@ const StyledCountryInfo = styled.div`
 	flex-direction: column;
 	color: #fff;
 	gap: 10px;
+	padding-bottom: 30px;
 `;
 
 const StyledBorders = styled.div`
 	display: flex;
-	background-color: red;
+	padding: 5px 20px;
+	background-color: #2b3844;
+`;
+
+const StyledTitleBorders = styled.h3`
+	color: #fff;
+	font-weight: 100;
+`;
+
+const StyledBordersContainer = styled.div`
+	padding-bottom: 30px;
+	display: flex;
+	gap: 10px;
+	color: #fff;
 `;
 export {
 	StyledBorders,
+	StyledBordersContainer,
 	StyledCountryDetailsContainer,
 	StyledCountryInfo,
-	StyledImg
+	StyledImg,
+	StyledTitleBorders
 };

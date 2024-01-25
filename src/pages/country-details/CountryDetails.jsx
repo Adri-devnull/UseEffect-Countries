@@ -1,18 +1,20 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
 	StyledBorders,
+	StyledBordersContainer,
 	StyledCountryDetailsContainer,
 	StyledCountryInfo,
-	StyledImg
+	StyledImg,
+	StyledTitleBorders
 } from './styles';
 
 const CountryDetails = () => {
 	const { state: country } = useLocation();
-
+	const navigate = useNavigate();
 	return (
 		<StyledCountryDetailsContainer>
 			<div>
-				<button>Back</button>
+				<button onClick={() => navigate('/')}>Back</button>
 				<div>
 					<StyledImg src={country.flags.png} alt={country.flags.alt} />
 				</div>
@@ -35,8 +37,6 @@ const CountryDetails = () => {
 						Capital: <span>{country.capital}</span>
 					</span>
 				</StyledCountryInfo>
-			</div>
-			<div>
 				<StyledCountryInfo>
 					<span>
 						Domain <span>{[...country.tld].join(' ')}</span>
@@ -45,18 +45,21 @@ const CountryDetails = () => {
 						Currencies: <span>{[...Object.keys(country.currencies)]}</span>
 					</span>
 					<span>
-						Languages: <span>{[...Object.keys(country.languages)]}</span>
+						Languages:{' '}
+						<span>{[...Object.keys(country.languages)].join(', ')}</span>
 					</span>
 				</StyledCountryInfo>
-			</div>
-			<h3>Border Countries:</h3>
-			<div>
-				{!country.borders && <p>No borders</p>}
-				{country?.borders?.map(border => (
-					<StyledBorders key={border}>
-						<span>{border}</span>
-					</StyledBorders>
-				))}
+				<div>
+					<StyledTitleBorders>Border Countries:</StyledTitleBorders>
+					<StyledBordersContainer>
+						{!country.borders && <p>No borders</p>}
+						{country?.borders?.map(border => (
+							<StyledBorders key={border}>
+								<span>{border}</span>
+							</StyledBorders>
+						))}
+					</StyledBordersContainer>
+				</div>
 			</div>
 		</StyledCountryDetailsContainer>
 	);
