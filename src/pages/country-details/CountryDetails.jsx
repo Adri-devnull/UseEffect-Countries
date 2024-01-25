@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {
 	StyledBorders,
 	StyledBordersContainer,
+	StyledButton,
 	StyledCountryDetailsContainer,
 	StyledCountryInfo,
 	StyledImg,
@@ -14,7 +15,7 @@ const CountryDetails = () => {
 	return (
 		<StyledCountryDetailsContainer>
 			<div>
-				<button onClick={() => navigate('/')}>Back</button>
+				<StyledButton onClick={() => navigate('/')}>Back</StyledButton>
 				<div>
 					<StyledImg src={country.flags.png} alt={country.flags.alt} />
 				</div>

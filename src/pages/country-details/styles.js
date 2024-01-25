@@ -22,7 +22,9 @@ const StyledCountryInfo = styled.div`
 const StyledBorders = styled.div`
 	display: flex;
 	padding: 5px 20px;
+	border-radius: 2px;
 	background-color: #2b3844;
+	box-shadow: 0px 0px 4px 1px rgba(17, 21, 23, 0.25);
 `;
 
 const StyledTitleBorders = styled.h3`
@@ -36,9 +38,32 @@ const StyledBordersContainer = styled.div`
 	gap: 10px;
 	color: #fff;
 `;
+
+const StyledButton = styled.button`
+	border-radius: 2px;
+	background: #2b3844;
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+	border: none;
+	padding: 10px 35px;
+	color: #fff;
+	margin: 40px 0px;
+	position: relative;
+	&::before {
+		content: '';
+		background-image: url('assets/images/arrow-back.png');
+		background-repeat: no-repeat;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 50%;
+		left: 5px;
+		transform: translateY(-50%);
+	}
+`;
 export {
 	StyledBorders,
 	StyledBordersContainer,
+	StyledButton,
 	StyledCountryDetailsContainer,
 	StyledCountryInfo,
 	StyledImg,

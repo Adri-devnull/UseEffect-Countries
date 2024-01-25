@@ -4,7 +4,7 @@ const StyledCountry = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 260px;
-	background-color: #445560;
+	background-color: #2b3844;
 	border-radius: 10px;
 `;
 
