@@ -5,6 +5,13 @@ const StyledFilterContainer = styled.div`
 	flex-direction: column;
 	gap: 30px;
 	margin-bottom: 50px;
+	width: 91%;
+
+	@media screen and (min-width: 1024px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 `;
 
 const StyledInput = styled.input`
@@ -21,6 +28,12 @@ const StyledInput = styled.input`
 	&:focus {
 		outline: none;
 		border: 1px solid #fff;
+		color: #fff;
+		font-weight: bold;
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 480px;
 	}
 `;
 

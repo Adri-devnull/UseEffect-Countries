@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
 	background-color: #2b3844;
 	color: #fff;
 	font-family: 'Nunito Sans', sans-serif;
-	padding: 0px 20px;
+	padding: 0px 90px;
 `;
 
 const StyledTitle = styled.h2`

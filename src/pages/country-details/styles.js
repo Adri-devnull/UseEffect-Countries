@@ -5,10 +5,17 @@ const StyledCountryDetailsContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding: 0px 30px;
+	@media screen and (min-width: 1024px) {
+		padding: 100px;
+	}
 `;
 
 const StyledImg = styled.img`
 	border-radius: 10px;
+	@media screen and (min-width: 1024px) {
+		width: 550px;
+		height: 350px;
+	}
 `;
 
 const StyledCountryInfo = styled.div`
@@ -59,13 +66,35 @@ const StyledButton = styled.button`
 		left: 5px;
 		transform: translateY(-50%);
 	}
+	@media screen and (min-width: 1024px) {
+		cursor: pointer;
+	}
 `;
+
+const StyledContainerDesktop = styled.div`
+	@media screen and (min-width: 1024px) {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+`;
+
+const StyledInfoDesktop = styled.div`
+	@media screen and (min-width: 1024px) {
+		display: flex;
+		align-items: center;
+		gap: 200px;
+	}
+`;
+
 export {
 	StyledBorders,
 	StyledBordersContainer,
 	StyledButton,
+	StyledContainerDesktop,
 	StyledCountryDetailsContainer,
 	StyledCountryInfo,
 	StyledImg,
+	StyledInfoDesktop,
 	StyledTitleBorders
 };
